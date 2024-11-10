@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-m1%#=6&%s+6g-7ntax+!rvj2ji$0mfag-=in$#+dkjyzjuwf+3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'BikeRentalApp.apps.BikerentalappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
