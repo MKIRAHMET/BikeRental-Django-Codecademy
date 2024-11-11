@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bike List</title>
+  {% load static %}
+  {% block head %}
+    <link rel="stylesheet" href="{% static 'BikeRentalApp/style.css' %}">
+  {% endblock %}
+</head>
+<body>
+  <h1>Welcome to Rent-a-Bike!</h1>
+  
+  <div class="content">
+    <h2>Bike List</h2>
+    {% block content %}
+      {% if bike_list %}
+        <table>
+          <thead>
+            <tr>
+              <th>Bike Type</th>
+              <th>Color</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for bike in bike_list %}
+              <tr>
+                <td>{{ bike.bike_type }}</td>
+                <td>{{ bike.color }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>No bikes available.</p>
+      {% endif %}
+    {% endblock %}
+    <a href="{% url 'home' %}">Return Home</a>
+  </div>
+
+ 
+</body>
+</html>

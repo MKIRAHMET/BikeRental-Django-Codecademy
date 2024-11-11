@@ -2,7 +2,7 @@
 {% load static %}  
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'BikeRentalApp/styles.css' %}">
+<link rel="stylesheet" href="{% static 'BikeRentalApp/style.css' %}">
 {% endblock %}
 
 
@@ -11,7 +11,7 @@
 
 <div id="list-container">
   <ul>
-    <li><a href="{% url 'bikelist' %}">Available Bikes</a></li>
+    <li><a href="{% url 'bikeList' %}">Available Bikes</a></li>
     <li><a href="{% url 'renterlist' %}">Renters</a></li>
     <li><a href="{% url 'rentallist' %}">Rentals</a></li>
   </ul>
