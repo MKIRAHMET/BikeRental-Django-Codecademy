@@ -7,38 +7,48 @@
 
 /* Body Styling */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
   color: #333;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+  margin: 0;
 }
 
-/* Container */
-.content {
-  max-width: 800px;
-  margin: auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  align: center;
-}
-
-/* Header */
+/* Header Styling */
 h1 {
   text-align: center;
   color: #2c3e50;
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8em;
+  margin: 15px 0;
+}
+
+/* Content Wrapper */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 /* Table Styling */
 table {
-  width: 100%;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
   border-collapse: collapse;
-  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 thead {
@@ -65,13 +75,14 @@ p {
   font-size: 1.2em;
   color: #666;
   text-align: center;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-/* Link Styling */
+/* Footer Link Styling */
 a {
-  display: inline-block;
-  margin-top: 20px;
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
   padding: 10px 15px;
   background-color: #3498db;
   color: #fff;
@@ -84,23 +95,9 @@ a:hover {
   background-color: #2980b9;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-  
-  h1 {
-    font-size: 2em;
-  }
-
-  th, td {
-    padding: 8px;
-    font-size: 0.9em;
-  }
-  
-  a {
-    padding: 8px 12px;
-    font-size: 0.9em;
-  }
+/* Footer Styling (Link Positioned at Bottom) */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f4f4f9;
 }

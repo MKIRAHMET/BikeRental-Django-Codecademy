@@ -11,8 +11,10 @@ class bikeList(ListView):
   model = Bike
   template_name = "BikeRentalApp/bikelist.html"
 
-def renterlist(request):
-   return render(request, 'BikeRentalApp/renterlist.html')
-
-def rentallist(request):
-   return render(request, 'BikeRentalApp/rentallist.html')
+class renterList(ListView):
+   model = Renter
+   template_name = 'BikeRentalApp/renterlist.html'
+   
+class rentalList(ListView):
+   model = Rental
+   template_name = 'BikeRentalApp/rentallist.html'
